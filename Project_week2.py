@@ -96,8 +96,10 @@ while bMainFlag:
         
         if (order_menu_input == 7):
             bMainFlag=TRUE
+
         elif (order_menu_input == 8):
             print("Order Dictionary is: ",order_Dict)
+
         elif (order_menu_input == 9):
             order_Dict["customer_name"] = input("Please Enter your name: ")
             order_Dict["customer_address"] = input("Please enter your address")
@@ -105,6 +107,13 @@ while bMainFlag:
             order_Dict["status"] = "PREPARING"
             order_Dict.update
             print("Your Order is on the way!")
+        
+        elif (order_menu_input == 11):
+            print("PRINT orders list with its index values")
+            # GET user input for order index value
+            # PRINT order status list with index values
+            # GET user input for order status index value
+            # UPDATE status for order")
     else:
         print("Incorrect selection")
         # Print_Main_Menu()
