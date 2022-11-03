@@ -16,7 +16,7 @@ def display_Main_Menu():
 def display_sub_Menu():
     print("\t***********Product Menu***********")
     print("Press 5 --> retrun to main menu,--> 6 to print the product List,")
-    print("-->2 to add new product,-->3 to update any product,-->4 to delete the product")
+    print("2 to add new product,-->3 to update any product,-->4 to delete the product")
 
 def add_Item_List(str_item, exiting_list):
     exiting_list.append(str_item)
