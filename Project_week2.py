@@ -9,7 +9,9 @@ def display_Main_Menu():
     str_Mesg = """ ***********Welcome to the store***********
     ***********Main Menu***********
     Please choose one of the following options : 
-    0 to exit the application, 1 to go in Product menu, 2 to go in Order menu"""
+    0 to exit the application, 
+    1 to go in Product menu, 
+    2 to go in Order menu"""
     print(str_Mesg)
 
 def display_Product_Menu():
@@ -34,7 +36,8 @@ def update_Item_List(item_index, item,exiting_list=[]):
     return exiting_list
 
 product_list = ["Coke Zero","Coke Regular","Orange Juice","Apple Juice"]
-order_Dict = {"customer_name": [None],"customer_address": [None],"customer_phone": [None],"status": [None]}
+order_Dict = [{"customer_name":"Joe","customer_address": "Preston","customer_phone": "0213685","status": "Delivered"}]
+order_list = [{"Preparing"}, {"Awaiting Pickup"}, {"Out-for-Delivery"}, {"Delivered"}]
 bMainFlag = True
 
 while bMainFlag:
@@ -101,11 +104,14 @@ while bMainFlag:
             print("Order Dictionary is: ",order_Dict)
 
         elif (order_menu_input == 9):
-            order_Dict["customer_name"] = input("Please Enter your name: ")
-            order_Dict["customer_address"] = input("Please enter your address")
-            order_Dict["customer_phone"] = input("Enter phone number:")
-            order_Dict["status"] = "PREPARING"
-            order_Dict.update
+            cust_name= input("Please Enter your name: ")
+            cust_add = input("Please enter your address")
+            cust_phone  = input("Enter phone number:")
+            # order_Dict["customer_name"] = input("Please Enter your name: ")
+            # order_Dict[index]["customer_address"] = input("Please enter your address")
+            # order_Dict[index]["customer_phone"] = input("Enter phone number:")
+            # order_Dict[index]["status"] = "PREPARING"
+            order_Dict.append({"customer_name":cust_name,"customer_address":cust_add,"cust_phone":cust_phone,"status":"PREPARING"})
             print("Your Order is on the way!")
         
         elif (order_menu_input == 11):

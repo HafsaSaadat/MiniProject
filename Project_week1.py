@@ -10,7 +10,7 @@ def display_Main_Menu():
                 ***********Welcome to the store***********
                 \t***********Main Menu***********
                 \n Press choose one of the following options
-                0 --> exit the application, --> 1 to go in sub menu
+                0 exit the application, 1 to go in sub menu
                 """
     print(str_Mesg)    
 def display_sub_Menu():
